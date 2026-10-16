@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F8FAFC;
+    font-size: 16px;
+}
+.btn{
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 7px;
+    margin: 2px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.text-primary{
+    background: #4F46E5;
+    color: #FFFFFF;
+}
+.text-danger{
+    background: #E54646;
+    color: #FFFFFF;
+}
+button{
+    cursor: pointer;
+}
+.text-success{
+    background: #10B981;
+    color: #FFFFFF;
+}
+.header{
+    background: #111827;
+    color: #F9FAFB;
+    padding: 20px;
+}
+.header .logo{
+    text-decoration: none;
+    color: #F9FAFB;
+}
+.header a.active
+{
+    background: #8D89D6;
+}
+.header a.btn:hover
+{
+    background: #8D89D6;
+}
+.header h2 span{
+    letter-spacing: 6px;
+}
+.header div.header-btn{
+    position: absolute;
+    right: 23px;
+    top: 37px;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.container{
+    box-shadow: 0px 0px 10px 0px black;
+    margin: 50px;
+    padding: 20px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+    
+}
+.container .container-header{
+    background: #00329c;
+    color: #F9FAFB;
+    padding: 10px;
+    
+    margin: -20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+
+.categories .add-category{
+    margin-bottom: 10px;
+}
+tr,td,th{
+    border: 1px solid black;
+}
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+th{
+    background: #04003B;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+td{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+form{
+    margin-top: 20px;
+}
+label,input, select{
+    width: 100%;
+    font-size: 20px;
+}
+input, select{
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.txt-danger{
+    color: red;
+}
+.form-group{
+    margin-top: 10px;
+}

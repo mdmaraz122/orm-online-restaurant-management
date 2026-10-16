@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category | ORM - Online Restaurant Management</title>
+    <link rel="stylesheet" href="maraz.css">
+</head>
+<body>
+    
+    <!-- Header -->
+     <section class="header">
+        <div>
+            <a href="" class="logo">
+                <h2>Online Restaurant <br><span>Management</span></h2>
+            </a>
+        </div>
+        <div class="header-btn">
+            <a href="" class="btn text-primary">Dashboard</a>
+            <a href="" class="btn text-primary">Users</a>
+            <a href="categories.html" class="btn text-primary active">Categories</a>
+            <a href="products.html" class="btn text-primary">Products</a>
+            <a href="" class="btn text-primary">Orders</a>
+            <a href="" class="btn text-danger">Logout</a>
+        </div>
+    </section>
+    <section class="categories">
+        <div class="container">
+            <div class="container-header">
+                <h1 class="text-center">Add Category</h1>
+            </div>
+            <div class="add-category text-right">
+                <a href="categories.html" class="btn text-primary">Back to Categories</a>
+            </div>
+            <form action="" method="post" class="category-form">
+                <div class="form-group">
+                    <label for="category-name">Category Name <span class="txt-danger">*</span></label>
+                    <input type="text" id="category-name" name="category-name" placeholder="Enter category name" required>
+                </div>
+                <div class="form-group">
+                    <label for="category-status">Status</label>
+                    <select id="category-status" name="category-status" required>
+                        <option value="">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn text-primary" style="margin-top: 20px; width: 100%;">Add Category</button>
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+</html>

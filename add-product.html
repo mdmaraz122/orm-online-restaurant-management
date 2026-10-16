@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product | ORM - Online Restaurant Management</title>
+    <link rel="stylesheet" href="maraz.css">
+</head>
+<body>
+    
+    <!-- Header -->
+     <section class="header">
+        <div>
+            <a href="" class="logo">
+                <h2>Online Restaurant <br><span>Management</span></h2>
+            </a>
+        </div>
+        <div class="header-btn">
+            <a href="" class="btn text-primary">Dashboard</a>
+            <a href="" class="btn text-primary">Users</a>
+            <a href="categories.html" class="btn text-primary active">Categories</a>
+            <a href="products.html" class="btn text-primary">Products</a>
+            <a href="" class="btn text-primary">Orders</a>
+            <a href="" class="btn text-danger">Logout</a>
+        </div>
+    </section>
+    <section class="categories">
+        <div class="container">
+            <div class="container-header">
+                <h1 class="text-center">Add Product</h1>
+            </div>
+            <div class="add-category text-right">
+                <a href="products.html" class="btn text-primary">Back to Products</a>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="product-name">Product Name <span class="txt-danger">*</span></label>
+                    <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Category <span class="txt-danger">*</span></label>
+                    <select id="product-category" name="product-category" required>
+                        <option value="">Select Category</option>
+                        <option value="burger">Burger</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="pasta">Pasta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-purchase-price">Purchase Price <span class="txt-danger">*</span></label>
+                    <input type="number" id="product-purchase-price" name="product-purchase-price" placeholder="Enter purchase price" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-selling-price">Selling Price <span class="txt-danger">*</span></label>
+                    <input type="number" id="product-selling-price" name="product-selling-price" placeholder="Enter selling price" required>
+                </div>
+                <button type="button" class="btn text-primary" style="margin-top: 20px; width: 100%;">Add Product</button>
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+</html>
