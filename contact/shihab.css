@@ -1,0 +1,147 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Body Styling - PDF Slide 09 & 13 */
+body {
+    font-family: "Segoe UI", Arial;
+    background-color: #c0d6ec;
+    line-height: 1;
+    padding: 20px;
+}
+
+/* 3. Headings Styling - PDF Slide 13 */
+h1 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+h2 {
+    display: table;
+    border: 2px solid #148ed4;
+    color: #1e293b;
+    padding: 6px 20px;
+    margin: 25px auto 12px auto;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #243a63;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+a:hover, a.active {
+    background-color: #148ed4;
+    transform: translateY(-2px); 
+}
+
+/* 5. Fieldset & Form Container - PDF Slide 05, 10 & 17 */
+fieldset {
+    border: 2px solid #148ed4;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    max-width: 850px;
+    margin: 20px auto;
+   
+}
+
+legend {
+    border: 2px solid #148ed4;
+    border-radius: 6px;
+    padding: 4px 12px;
+    background-color: #ffffff;
+    color: #148ed4;
+  
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #148ed4;
+}
+
+fieldset table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+
+table[border="2"] {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    background-color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(to right, #1b1f3b, #148ed4);
+    color: white;
+    font-weight: 600;
+}
+
+button {
+    background: linear-gradient(to right, #148ed4, #1285e2);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #1b1f3b;
+    transform: translateY(-1px);
+}
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+
+}
