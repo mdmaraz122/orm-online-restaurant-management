@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Management</title>
+    <link rel="stylesheet" href="shihab.css">
+</head>
+<body>
+
+    <h1>Online Restaurant Management</h1>
+    <a href="dashboard.html">Dashboard</a> 
+    <a href="user-management.html">User Management</a>
+    <a href="contact-management.html" class="active">Contact Messages</a> 
+
+    <h2>Customer Messages</h2>
+    <table border="2" id="msgtable">
+        <tr>
+            <th>Msg ID</th>
+            <th>Customer Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>MSG-101</td>
+            <td>Tanvir Ahmed</td>
+            <td>tanvir@gmail.com</td>
+            <td>Table Reservation</td>
+            <td>Can I reserve a table for 4 people tonight?</td>
+            <td>Pending</td>
+            <td>
+                <button type="button" onclick="deleteMessage(event)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>MSG-102</td>
+            <td>Fatema Begum</td>
+            <td>fatema@gmail.com</td>
+            <td>Food Quality</td>
+            <td>Is the chicken dish halal certified?</td>
+            <td>Replied</td>
+            <td>
+                <button type="button" onclick="deleteMessage(event)">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <form action="contact-management.html" method="post" onsubmit="return validateAndReply()">
+        <fieldset>
+            <legend>Message Action & Reply</legend>
+            <table>
+                <tr>
+                    <td><label for="msgid">Message ID:</label></td>
+                    <td><input type="text" id="msgid" name="msgid" value="MSG-101"></td>
+                </tr>
+                <tr>
+                    <td><label for="replymsg">Admin Reply:</label></td>
+                    <td>
+                        <textarea id="replymsg" name="replymsg" rows="5" cols="20" placeholder="Type your reply here..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="statusselect">Update Status:</label></td>
+                    <td>
+                        <select id="statusselect" name="statusselect">
+                            <option value="Pending">Pending</option>
+                            <option value="Replied">Replied</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Send Reply</button>
+                        <button type="reset" onclick="clearMessage()">Reset</button>
+                    </td>
+                </tr>
+            </table>
+            
+            <p id="statusMessage"></p>
+        </fieldset>
+    </form>
+
+    <script src="shihab.js"></script>
+</body>
+</html>
