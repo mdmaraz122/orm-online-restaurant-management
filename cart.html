@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="my_script.js" defer></script>
+        <title>
+            Online Restaurant
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+            /* * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            .header {
+                background-color: orangered;
+                color: white;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position:sticky;
+                text-align: center;
+            }
+
+            .nav a {
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                text-decoration: none; 
+            }
+
+            .logo {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .nav a:hover {
+                text-decoration: underline;
+            }
+
+            .nav {
+                padding-top: 5px;
+                display: flex;
+                gap: 25px;
+            } */
+
+
+
+/* 
+
+            .cart-baground{
+                background-color:#fff8f0;
+                display: flex;
+                justify-content: center;
+                 padding-bottom: 40px;
+
+
+            }
+            .cart-box{
+                background-color:white;
+                margin: 20px;
+                height: 500px;
+                width: 450px;
+                 box-shadow: 0 4px 12px gray;
+                  border-radius: 20px;
+                 
+
+            } */
+
+
+
+
+
+/* 
+
+
+            .footer{
+                background-color: black;
+                color: aliceblue;
+                height: 200px;
+                text-align: center;
+            }
+ */
+ .head{
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+ }
+ .dname{
+    font-size: 18px;
+    margin: 20px 20px;
+    padding-left: 40px;
+ }
+
+ .dnum{
+     font-size: 18px;
+    margin: 20px 20px;
+    padding-left: 40px;
+ }
+ .daddress{
+    font-size: 18px;
+    margin: 10px 20px;
+    padding-left: 45px;
+ }
+
+ .dbutton{
+     font-size: 18px;
+    margin: 5px 5px;
+    padding: 30px;
+    text-align: center;
+
+ }
+ button{
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    font-size: 22px;
+    font-weight:bold;
+    background-color:rgb(239, 88, 166);
+    padding: 10px;
+ }
+ button:hover{
+    background-color: rgb(205, 40, 158);
+    color: white;
+ }
+#name{
+    text-align: center;
+    margin: 10px;
+}
+h3{text-align: center;}
+
+
+
+        </style>
+    </head>
+
+    <body> 
+
+        <div class="header">
+            <div class="logo">
+                <h2>🍽️ Online Restaurant</h2>
+            </div>
+
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Cart</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            
+        </div>
+
+
+    <div class="cart-baground ">
+
+        
+  <div class="cart-box">
+    <h3>Your Cart</h3>
+
+    <p id="emptyMsg">Your cart is empty</p>
+
+    <p id="row1">
+        Burger - 280tk x <span id="qty1"></span> = tk<span id="sum1"></span>
+        <button onclick="changeQty(1, 1)">+</button>
+        <button onclick="changeQty(1, -1)">-</button>
+        <button onclick="removeItem(1)">Remove</button>
+    </p>
+
+    <p id="row2">
+        Biryani - ৳180 x <span id="qty2"></span> = ৳<span id="sum2"></span>
+        <button onclick="changeQty(2, 1)">+</button>
+        <button onclick="changeQty(2, -1)">-</button>
+        <button onclick="removeItem(2)">Remove</button>
+    </p>
+
+    <p id="row3">
+        Fried Chicken - ৳180 x <span id="qty3"></span> = ৳<span id="sum3"></span>
+        <button onclick="changeQty(3, 1)">+</button>
+        <button onclick="changeQty(3, -1)">-</button>
+        <button onclick="removeItem(3)">Remove</button>
+    </p>
+
+    <h3 id="totalLine">Total Bill: ৳<span id="total"></span></h3>
+</div>
+
+
+            
+
+<div class="cart-box">
+box2
+<div class="head">
+    <h3>Deleviry Information</h3>
+</div>
+
+<div class="dname">
+    <label for="name">Full Name</label>
+    <br>
+    <input type="text" id="name" placeholder="Enter Your Name">
+<p id="nameMsg"></p>
+</div>
+
+<div class="dnum">
+    <label for="number">Phone Number</label>
+    <br>
+    <input type="number" id="number" placeholder="Enter Your Number">
+<p id="numberMsg"></p>
+</div>
+
+
+<div class="daddress">
+    <label for="address">Deleviry Address</label>
+    <textarea name="address" id="address"></textarea>
+    <p id="count"></p>
+</div>
+<p id="orderMsg"></p>
+
+
+<div class="dbutton">
+    <Button class="confirm-button" onclick="checkOrder()">Confirm & Place Order</Button>
+</div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+<!-- 
+        <div class="footer">
+             <p>🍽️ Online Restaurant</p>
+             <p>Fresh Food, Fast Delivery!</p>
+             <p>Quality Food | Best Service | Fast Delivery</p>
+             <p>Your Satisfaction Is Our Priority.</p>
+
+             <p>Privacy Policy | Terms & Conditions</p>
+
+             <p>© 2026 Online Restaurant. All Rights Reserved.</p>
+             <p>Designed with ❤️ for Food Lovers.</p>
+
+
+
+        </div> -->
+<script>
+
+
+function checkOrder() {
+
+    let name = document.getElementById("name").value;
+    let number = document.getElementById("number").value;
+
+    if (name == "") {
+        document.getElementById("nameMsg").innerHTML = "Enter your name";
+    }
+    else {
+        document.getElementById("nameMsg").innerHTML = "";
+    }
+
+    if (number == "") {
+        document.getElementById("numberMsg").innerHTML = "Enter your number";
+    }
+    else {
+        document.getElementById("numberMsg").innerHTML = "";
+    }
+
+    if (name != "" && number != "") {
+        document.getElementById("orderMsg").innerHTML = alert("Order placed successfully!");
+    }
+}
+
+
+function countAddress() {
+    let address = document.getElementById("address").value;
+
+    document.getElementById("count").innerHTML =
+    "Characters: " + address.length;
+}
+
+
+function countAddress() {
+
+    let address = document.getElementById("address").value;
+
+    document.getElementById("count").innerHTML =
+    "Characters: " + address.length;
+}
+
+document.getElementById("address").addEventListener("keyup", countAddress);
+        </script>
+    </body>
+</html>
