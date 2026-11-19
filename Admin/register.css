@@ -1,0 +1,59 @@
+.auth-container {
+    max-width: 680px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+.input-grp select {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #f3f4f6;
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+}
+.input-grp select:focus {
+    border-color: #5835dc;
+    background-color: #fff;
+}
+.choice-grp {
+    margin-bottom: 16px;
+}
+.choice-title {
+    display: block;
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.radio-row {
+    display: flex;
+    gap: 20px;
+}
+.radio-row label,
+.terms-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+.success-show {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #86efac;
+}
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
