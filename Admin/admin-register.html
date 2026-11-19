@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Registration</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h1 class="page-title">Admin Portal</h1>
+    <div class="card-box">
+      <div class="form-section">
+        <h2>Create Admin Account</h2>
+        <div id="error-message" class="error-show" style="display: none;"></div>
+        <div id="success-message" class="success-show" style="display: none;"></div>
+
+        <form method="post" onsubmit="return validateRegister()" novalidate>
+          <div class="form-grid">
+            <div class="input-grp">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name">
+              <div class="error-text" id="name-error"></div>
+            </div>
+
+            <div class="input-grp">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+              <div class="error-text" id="email-error"></div>
+            </div>
+
+            <div class="input-grp">
+              <label for="phone">Phone (11 digits)</label>
+              <input type="text" id="phone" name="phone" placeholder="01XXXXXXXXX">
+              <div class="error-text" id="phone-error"></div>
+            </div>
+
+            <div class="input-grp">
+              <label for="role">Role</label>
+              <select id="role" name="role">
+                <option value="">-- Select role --</option>
+                <option value="Manager">Manager</option>
+                <option value="Cashier">Cashier</option>
+                <option value="Chef">Head Chef</option>
+              </select>
+              <div class="error-text" id="role-error"></div>
+            </div>
+
+            <div class="choice-grp">
+              <span class="choice-title">Gender</span>
+              <div class="radio-row">
+                <label for="male"><input type="radio" id="male" name="gender" value="Male"> Male</label>
+                <label for="female"><input type="radio" id="female" name="gender" value="Female"> Female</label>
+              </div>
+              <div class="error-text" id="gender-error"></div>
+            </div>
+
+            <div class="input-grp">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="At least 8 characters">
+              <div class="error-text" id="password-error"></div>
+            </div>
+
+            <div class="input-grp">
+              <label for="confirm">Confirm Password</label>
+              <input type="password" id="confirm" name="confirm" placeholder="Repeat the password">
+              <div class="error-text" id="confirm-error"></div>
+            </div>
+          </div>
+
+          <div class="choice-grp">
+            <label for="terms" class="terms-label">
+              <input type="checkbox" id="terms" name="terms" value="agree"> I agree to the terms and conditions
+            </label>
+            <div class="error-text" id="terms-error"></div>
+          </div>
+
+          <button type="submit" class="login-btn">Create Account</button>
+          <p class="switch-text">
+            Already registered? <a href="login.html">Login here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="register.js"></script>
+</body>
+</html>
