@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product | ORM - Online Restaurant Management</title>
+    <link rel="stylesheet" href="maraz.css">
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <a href="#" class="logo">
+                <h2>Online Restaurant <br><span>Management</span></h2>
+            </a>
+        </div>
+        <nav class="header-btn">
+            <a href="#" class="btn text-primary">Dashboard</a>
+            <a href="#" class="btn text-primary">Users</a>
+            <a href="categories.html" class="btn text-primary">Categories</a>
+            <a href="products.html" class="btn text-primary active">Products</a>
+            <a href="#" class="btn text-primary">Orders</a>
+            <a href="#" class="btn text-danger">Logout</a>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <div class="container">
+            <div class="container-header">
+                <h1 class="text-center">Add Product</h1>
+            </div>
+
+            <div class="text-right">
+                <a href="products.html" class="btn text-primary">Back to Products</a>
+            </div>
+
+            <div id="form-success" class="success-msg"></div>
+
+            <form id="product-form" action="" method="post" novalidate>
+                <div class="form-group">
+                    <label for="product-name">Product Name <span class="txt-danger">*</span></label>
+                    <input type="text" id="product-name" name="product-name" placeholder="Enter product name">
+                    <span id="product-name-error" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-category">Category <span class="txt-danger">*</span></label>
+                    <select id="product-category" name="product-category">
+                        <option value="">Select Category</option>
+                        <option value="burger">Burger</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="pasta">Pasta</option>
+                        <option value="drinks">Drinks</option>
+                    </select>
+                    <span id="product-category-error" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-purchase-price">Purchase Price ($) <span class="txt-danger">*</span></label>
+                    <input type="number" step="0.01" id="product-purchase-price" name="product-purchase-price" placeholder="Enter purchase price">
+                    <span id="product-purchase-price-error" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-selling-price">Selling Price ($) <span class="txt-danger">*</span></label>
+                    <input type="number" step="0.01" id="product-selling-price" name="product-selling-price" placeholder="Enter selling price">
+                    <span id="product-selling-price-error" class="error-msg"></span>
+                </div>
+
+                <div id="profit-preview" class="profit-box">Estimated Profit: $0.00</div>
+
+                <div class="form-group">
+                    <label for="product-status">Status <span class="txt-danger">*</span></label>
+                    <select id="product-status" name="product-status">
+                        <option value="">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                    <span id="product-status-error" class="error-msg"></span>
+                </div>
+
+                <button type="submit" class="btn text-primary btn-full">Add Product</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="maraz.js"></script>
+</body>
+</html>
