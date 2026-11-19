@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product | ORM - Online Restaurant Management</title>
     <link rel="stylesheet" href="maraz.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
 </head>
-<body>
 
+<body>
+    <audio src="audio.wav" id="audio"></audio>
+    <div id="notification-box" class="notification"></div>
     <header class="header">
         <div>
             <a href="#" class="logo">
@@ -36,11 +40,10 @@
 
             <div id="form-success" class="success-msg"></div>
 
-            <form id="product-form" action="" method="post" novalidate>
+            <form id="product-form" action="" method="post">
                 <div class="form-group">
                     <label for="product-name">Product Name <span class="txt-danger">*</span></label>
                     <input type="text" id="product-name" name="product-name" placeholder="Enter product name">
-                    <span id="product-name-error" class="error-msg"></span>
                 </div>
 
                 <div class="form-group">
@@ -52,13 +55,12 @@
                         <option value="pasta">Pasta</option>
                         <option value="drinks">Drinks</option>
                     </select>
-                    <span id="product-category-error" class="error-msg"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="product-purchase-price">Purchase Price ($) <span class="txt-danger">*</span></label>
                     <input type="number" step="0.01" id="product-purchase-price" name="product-purchase-price" placeholder="Enter purchase price">
-                    <span id="product-purchase-price-error" class="error-msg"></span>
+
                 </div>
 
                 <div class="form-group">
@@ -66,8 +68,6 @@
                     <input type="number" step="0.01" id="product-selling-price" name="product-selling-price" placeholder="Enter selling price">
                     <span id="product-selling-price-error" class="error-msg"></span>
                 </div>
-
-                <div id="profit-preview" class="profit-box">Estimated Profit: $0.00</div>
 
                 <div class="form-group">
                     <label for="product-status">Status <span class="txt-danger">*</span></label>
@@ -79,11 +79,12 @@
                     <span id="product-status-error" class="error-msg"></span>
                 </div>
 
-                <button type="submit" class="btn text-primary btn-full">Add Product</button>
+                <button type="button" onclick="addProduct()" class="btn text-primary btn-full">Add Product</button>
             </form>
         </div>
     </section>
 
     <script src="maraz.js"></script>
 </body>
+
 </html>

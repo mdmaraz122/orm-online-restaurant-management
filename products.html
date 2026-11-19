@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | ORM - Online Restaurant Management</title>
     <link rel="stylesheet" href="maraz.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
 </head>
-<body>
 
+<body>
+    <audio src="audio.wav" id="audio"></audio>
+    <div id="notification-box" class="notification"></div>
     <header class="header">
         <div>
             <a href="#" class="logo">
@@ -31,9 +35,7 @@
             </div>
 
             <div class="top-bar">
-                <input type="text" id="table-search" class="search-input" placeholder="Search products...">
                 <div>
-                    <strong id="total-count" style="margin-right: 15px;">Total Items: 4</strong>
                     <a href="add-product.html" class="btn text-primary">Add Product</a>
                 </div>
             </div>
@@ -61,7 +63,7 @@
                         <td>
                             <a href="view-product.html" class="btn text-success">View</a>
                             <a href="update-product.html" class="btn text-primary">Update</a>
-                            <a href="#" class="btn text-danger delete-btn">Delete</a>
+                            <button type="button" onclick="deleteProduct()" class="btn text-danger delete-btn">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +76,7 @@
                         <td>
                             <a href="view-product.html" class="btn text-success">View</a>
                             <a href="update-product.html" class="btn text-primary">Update</a>
-                            <a href="#" class="btn text-danger delete-btn">Delete</a>
+                            <button type="button" onclick="deleteProduct()" class="btn text-danger delete-btn">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -87,7 +89,7 @@
                         <td>
                             <a href="view-product.html" class="btn text-success">View</a>
                             <a href="update-product.html" class="btn text-primary">Update</a>
-                            <a href="#" class="btn text-danger delete-btn">Delete</a>
+                            <button type="button" onclick="deleteProduct()" class="btn text-danger delete-btn">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -100,14 +102,21 @@
                         <td>
                             <a href="view-product.html" class="btn text-success">View</a>
                             <a href="update-product.html" class="btn text-primary">Update</a>
-                            <a href="#" class="btn text-danger delete-btn">Delete</a>
+                            <button type="button" onclick="deleteProduct()" class="btn text-danger delete-btn">Delete</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
+            <div class="text-center mt-2">
+                <div>
+                    <button type="button" href="add-product.html" onclick="loadMoreProducts()" class="btn text-dark">Load More +</button>
+                </div>
+            </div>
         </div>
     </section>
 
     <script src="maraz.js"></script>
 </body>
+
 </html>
