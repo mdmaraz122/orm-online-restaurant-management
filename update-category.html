@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category | ORM - Online Restaurant Management</title>
+    <link rel="stylesheet" href="maraz.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <audio src="audio.wav" id="audio"></audio>
+    <div id="notification-box" class="notification"></div>
+    <header class="header">
+        <div>
+            <a href="#" class="logo">
+                <h2>Online Restaurant <br><span>Management</span></h2>
+            </a>
+        </div>
+        <nav class="header-btn">
+            <a href="#" class="btn text-primary">Dashboard</a>
+            <a href="#" class="btn text-primary">Users</a>
+            <a href="categories.html" class="btn text-primary active">Categories</a>
+            <a href="products.html" class="btn text-primary">Products</a>
+            <a href="#" class="btn text-primary">Orders</a>
+            <a href="#" class="btn text-danger">Logout</a>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <div class="container">
+            <div class="container-header">
+                <h1 class="text-center">Update Category</h1>
+            </div>
+
+            <div class="text-right">
+                <a href="categories.html" class="btn text-primary">Back to Categories</a>
+            </div>
+
+
+            <form id="category-update-form" action="" method="post">
+                <div class="form-group">
+                    <label for="category-name">Category Name <span class="txt-danger">*</span></label>
+                    <input type="text" id="category-name" name="category-name" value="Burger" placeholder="Enter category name">
+                </div>
+
+                <div class="form-group">
+                    <label for="category-status">Status <span class="txt-danger">*</span></label>
+                    <select id="category-status" name="category-status">
+                        <option value="">Select Status</option>
+                        <option value="active" selected>Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="updateCategory()" class="btn text-primary btn-full">Update Category</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="maraz.js"></script>
+</body>
+
+</html>

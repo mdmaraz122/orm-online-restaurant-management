@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | ORM - Online Restaurant Management</title>
+    <link rel="stylesheet" href="maraz.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <audio src="audio.wav" id="audio"></audio>
+    <div id="notification-box" class="notification"></div>
+    <header class="header">
+        <div>
+            <a href="#" class="logo">
+                <h2>Online Restaurant <br><span>Management</span></h2>
+            </a>
+        </div>
+        <nav class="header-btn">
+            <a href="#" class="btn text-primary">Dashboard</a>
+            <a href="#" class="btn text-primary">Users</a>
+            <a href="categories.html" class="btn text-primary active">Categories</a>
+            <a href="products.html" class="btn text-primary">Products</a>
+            <a href="#" class="btn text-primary">Orders</a>
+            <a href="#" class="btn text-danger">Logout</a>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <div class="container">
+            <div class="container-header">
+                <h1 class="text-center">Categories</h1>
+            </div>
+
+            <div class="top-bar">
+                <div>
+                    <a href="add-category.html" class="btn text-primary">Add Category</a>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Burger</td>
+                        <td>Active</td>
+                        <td>
+                            <a href="update-category.html" class="btn text-primary">Update</a>
+                            <button type="button" onclick="deleteCategory()" class="btn text-danger delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pizza</td>
+                        <td>Active</td>
+                        <td>
+                            <a href="update-category.html" class="btn text-primary">Update</a>
+                            <button type="button" onclick="deleteCategory()" class="btn text-danger delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pasta</td>
+                        <td>Active</td>
+                        <td>
+                            <a href="update-category.html" class="btn text-primary">Update</a>
+                            <button type="button" onclick="deleteCategory()" class="btn text-danger delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Drinks</td>
+                        <td>Inactive</td>
+                        <td>
+                            <a href="update-category.html" class="btn text-primary">Update</a>
+                            <button type="button" onclick="deleteCategory()" class="btn text-danger delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center mt-2">
+                <div>
+                    <button type="button" href="add-product.html" onclick="loadMoreProducts()" class="btn text-dark">Load More +</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="maraz.js"></script>
+</body>
+
+</html>
