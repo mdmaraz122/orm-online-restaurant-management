@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Online Restaurant
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* * {
+            
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            .header {
+                background-color: orangered;
+                color: white;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position:fixed;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav a {
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                text-decoration: none; 
+            }
+
+            .logo {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .nav a:hover {
+                text-decoration: underline;
+            }
+
+            .nav {
+                padding-top: 5px;
+                display: flex;
+                gap: 25px;
+            }
+
+            .login-button {
+                display: flex;
+                gap: 5px;
+            }
+
+            .login-button button {
+                background-color: white;
+                color: #ff6b35;
+                border: none;
+                 padding: 8px 16px;
+            
+                 border-radius: 5px; 
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+
+            .login-button button :hover{
+
+                background-color: brown;
+                color: aliceblue;
+
+            }
+
+            .contact-baground{
+                background-color:#fff8f0;
+                 display: flex;
+                justify-content:center;
+                padding-top: 70px;
+
+            }
+            .contact-box{
+                background-color:white;
+                width: 400px;
+                height: 600px;
+                margin: 20px 20px 20px 20px;
+                box-shadow: 0 4px 12px gray;
+                align-items: center;
+                border-radius: 20px;
+
+            }
+
+
+
+
+
+            .footer{
+                background-color: black;
+                color: aliceblue;
+                height: 200px;
+                text-align: center;
+            } */
+
+/* 
+            .contact-box{
+                padding: 50px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            input{
+               text-align: center;
+               width: 300px;
+               height: 30px;
+               
+            }
+            textarea{
+                width: 300px;
+               height: 100px;
+                              
+
+            }
+            .contact-submit{
+                text-align: center;
+                font-weight: bold;
+                font-size: 32;
+                padding: 15px;
+                border-radius: 20px;
+                background-color:cornflowerblue;
+
+                color: aliceblue;
+            }
+            .contact-submit:hover{
+                background-color:rgb(96, 142, 228);
+            }
+
+            .contact-box h1{
+                color: orangered;
+                text-align: center;
+            }
+         
+             */
+.submitBtn{
+    text-align: center;
+}
+        </style>
+    </head>
+
+    <body> 
+
+        <div class="header">
+            <div class="logo">
+                <h2>🍽️ Online Restaurant</h2>
+            </div>
+
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Cart</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+          
+        </div>
+
+
+        <div class="contact-baground">
+
+
+            <div class="contact-box">
+                <h1>Contact Us</h1>
+
+               <br>
+                <label for="name">Name :</label>
+                <br>
+        
+        <input type="text" id="name" class="name" placeholder="Enter Your name" required>
+  <br>
+    <td><p id="nameMsg"></p></td>
+    <br>
+        <label for="email">Email/Phone :</label>
+        <br>
+        <input type="email" id="email" class="email" placeholder="Enter Your Email" required>
+        <br>
+       <p id="emailMsg"></p>
+        <br>
+                <label for="message">Massage :</label>
+         <br>
+        <textarea name="message" id="message" ></textarea>
+  
+        <br>
+    <p id="count">Characters: 0</p>
+
+    <br>
+   
+<p id="sendMsg"></p>
+<div class="submitBtn">
+            <button class="contact-submit" onclick="checkForm()">
+                Submit
+            </button>
+            </div>
+      <br>
+
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+             <p>🍽️ Online Restaurant</p>
+             <p>Fresh Food, Fast Delivery!</p>
+             <p>Quality Food | Best Service | Fast Delivery</p>
+             <p>Your Satisfaction Is Our Priority.</p>
+
+             <p>Privacy Policy | Terms & Conditions</p>
+
+             <p>© 2026 Online Restaurant. All Rights Reserved.</p>
+             <p>Designed with ❤️ for Food Lovers.</p>
+
+
+        </div>
+
+
+
+<script>function checkForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("message").value;
+    
+    if (name.trim() == "") {
+        document.getElementById("nameMsg").innerHTML = "Please enter your name.";
+    }
+    else {
+        document.getElementById("nameMsg").innerHTML = "";
+    }
+
+    
+    if (email == "") {
+        document.getElementById("emailMsg").innerHTML = "Please enter your email.";
+    }
+    else {
+        document.getElementById("emailMsg").innerHTML = "";
+    }
+
+
+     if (name.trim() != "" && email != "" && msg.trim() != "") {
+ 
+       
+       alert("Your message submitted successfully!");
+    }
+
+}
+function countMessage() {
+    let msg = document.getElementById("message").value;
+    document.getElementById("count").innerHTML = "Characters: " + msg.length;
+}
+
+document.getElementById("name").addEventListener("keyup", checkForm);
+document.getElementById("email").addEventListener("keyup", checkForm);
+document.getElementById("message").addEventListener("keyup", countMessage);
+
+
+</script>
+    </body>
+</html>
